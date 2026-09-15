@@ -1,146 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me - Kurt Ian I. Tirol</title>
+  
 
-    <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css">
 
-    <!-- EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <script>
-        emailjs.init({
-            publicKey: "d2qtMLP2W8dQh0WOk"
-        });
-    </script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("d2qtMLP2W8dQh0WOk");
+    })();
+  </script>
 </head>
-
 <body>
 
-    <h1>Contact Me</h1>
+  <nav>
+    <a class="nav-link highlight"  href="index.html">Introductions</a> |
+    <a class="nav-link highlight" href="about.html">About Me</a> |
+    <a class="nav-link highlight" href="hobbies.html">My Hobbies</a> |
+    <a class="nav-link highlight" href="favorites.html">My Favorites</a> |
+    <a class="nav-link highlight" href="goals.html">My Goals</a> |
+    <a class="nav-link highlight" href="contact.html">Contact Me</a> |
+  </nav>
 
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="About.html">About Me</a> |
-        <a href="Hobbies.html">Hobbies</a> |
-        <a href="Favorites.html">Favorites</a> |
-        <a href="Goals.html">Goals</a> |
-        <a href="contact.html">Contact Me</a>
-    </nav>
 
-    <hr>
+  <h1 id="main-header">Contact Me</h1>
+  <hr>
 
-    <form id="contact-form">
 
-        <!-- Name -->
-        <label for="name">Full Name:</label>
-        <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            required
-        >
+  <div id="about-section">
+    <p class="section-title profile-info">Please fill out the form below to send me a message.</p>
+  </div>
 
-        <br><br>
+  <form id="contact-form">
 
-        <!-- Gmail -->
-        <label for="email">Gmail:</label>
-        <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your Gmail"
-            required
-        >
 
-        <br><br>
+    <label for="name" class="section-title">Full Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-        <!-- Gender -->
-        <label>Gender:</label>
-        <br>
+    <br><br>
 
-        <input type="radio" id="male" name="gender" value="Male" required>
-        <label for="male">Male</label>
 
-        <input type="radio" id="female" name="gender" value="Female">
-        <label for="female">Female</label>
+    <label for="email" class="section-title">Gmail:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your Gmail" required>
 
-        <input type="radio" id="gay" name="gender" value="Gay">
-        <label for="gay">Gay</label>
+    <br><br>
 
-        <input type="radio" id="lesbian" name="gender" value="Lesbian">
-        <label for="lesbian">Lesbian</label>
 
-        <input type="radio" id="other" name="gender" value="Other">
-        <label for="other">Other</label>
+    <label class="section-title">Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="Male" required>
+    <label for="male">Male</label>
 
-        <br><br>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label>
 
-        <!-- Strand -->
-        <label for="strand">Strand:</label>
+    <input type="radio" id="gay" name="gender" value="Gay">
+    <label for="gay">Gay</label>
 
-        <select id="strand" name="strand" required>
-            <option value="">Select Strand</option>
-            <option value="ICT">ICT</option>
-            <option value="STEM">STEM</option>
-            <option value="ABM">ABM</option>
-            <option value="GAS">GAS</option>
-            <option value="HUMSS">HUMSS</option>
-        </select>
+    <input type="radio" id="lesbian" name="gender" value="Lesbian">
+    <label for="lesbian">Lesbian</label>
 
-        <br><br>
+    <input type="radio" id="other" name="gender" value="Other">
+    <label for="other">Other</label>
 
-        <!-- Message -->
-        <label for="message">Message:</label>
-        <br>
+    <br><br>
 
-        <textarea
-            id="message"
-            name="message"
-            rows="5"
-            cols="50"
-            placeholder="Type your message here..."
-            required
-        ></textarea>
 
-        <br><br>
+    <label class="section-title">Skills:</label><br>
+    <input type="checkbox" id="html" name="skills" value="HTML">
+    <label for="html">HTML</label>
 
-        <button type="submit">Send Message</button>
-        <button type="reset">Clear Form</button>
+    <input type="checkbox" id="css" name="skills" value="CSS">
+    <label for="css">CSS</label>
 
-    </form>
+    <input type="checkbox" id="js" name="skills" value="JavaScript">
+    <label for="js">JavaScript</label>
 
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
+    <br><br>
 
-            event.preventDefault();
 
-            emailjs.sendForm(
-                "service_pjh0uuc",
-                "template_hwwchig",
-                this
-            )
-            .then(function() {
+    <label for="strand" class="section-title">Strand:</label><br>
+    <select id="strand" name="strand" required>
+      <option value="">Select Strand</option>
+      <option value="ICT">ICT</option>
+      <option value="STEM">STEM</option>
+      <option value="ABM">ABM</option>
+      <option value="GAS">GAS</option>
+      <option value="HUMSS">HUMSS</option>
+    </select>
 
-                alert("Message sent successfully!");
+    <br><br>
 
-                document.getElementById("contact-form").reset();
 
-            })
-            .catch(function(error) {
+    <label for="message" class="section-title">Message:</label><br>
+    <textarea id="message" name="message" rows="5" cols="50" placeholder="Type your message here..." required></textarea>
 
-                alert("Message failed to send. Please try again.");
+    <br><br>
 
-                console.error("EmailJS Error:", error);
+    <button type="submit">Send Message</button>
+    <button type="reset">Clear Form</button>
 
-            });
+  </form>
 
-        });
-    </script>
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm(
+        "service_pjh0uuc",
+        "template_hwwchig",
+        this
+      )
+      .then(function() {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      })
+      .catch(function(error) {
+        alert("Message failed to send. Please try again.");
+        console.error("EmailJS Error:", error);
+      });
+    });
+  </script>
 
 </body>
-
 </html>
