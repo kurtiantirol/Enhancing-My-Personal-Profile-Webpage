@@ -1,1 +1,32 @@
+body {
+    color: black;
+}
 
+h1 {
+    text-align: center;
+}
+
+.profile-info {
+    color: blue;
+}
+
+.section-title {
+    font-weight: bold;
+}
+
+.nav-link{
+    text-align: center;
+}
+
+.highlight {
+    background-color:blue;
+    font-weight: bold;
+}
+
+#main-header {
+    text-align; center;
+}
+
+#about-section{
+    background-color: lightgray;
+}
