@@ -1,32 +1,125 @@
+/* GENERAL PAGE */
 body {
-    color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+
+    /* COLOR + GRADIENT */
+    background: linear-gradient(
+        135deg,
+        #ff6b6b,
+        #feca57,
+        #48dbfb,
+        #5f27cd
+    );
+
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
 }
 
+/* GRADIENT ANIMATION */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* NAVIGATION */
+nav {
+    background-color: rgba(0, 0, 0, 0.70);
+    padding: 20px;
+}
+
+/* NAVIGATION TEXT */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+/* HOVER COLOR */
+nav a:hover {
+    color: #feca57;
+}
+
+/* MAIN PROFILE BOX */
+.profile {
+    width: 75%;
+    margin: 60px auto;
+    padding: 40px;
+
+    /* OPACITY */
+    background-color: rgba(0, 0, 0, 0.65);
+
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* MAIN TITLE */
 h1 {
-    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 45px;
+    color: #feca57;
+
+    /* TEXT */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 5px black;
 }
 
-.profile-info {
-    color: blue;
+/* SUBTITLE */
+h2 {
+    color: #48dbfb;
+    font-size: 27px;
 }
 
-.section-title {
+/* PARAGRAPH */
+p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* CARDS */
+.card {
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+
+    /* OPACITY */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* CARD HOVER */
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+/* BUTTON */
+button {
+    background: linear-gradient(45deg, #ff6b6b, #5f27cd);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.nav-link{
-    text-align: center;
-}
-
-.highlight {
-    background-color:blue;
-    font-weight: bold;
-}
-
-#main-header {
-    text-align; center;
-}
-
-#about-section{
-    background-color: lightgray;
-}
+button:hover {
+    opacity: 0.8;
+    }
