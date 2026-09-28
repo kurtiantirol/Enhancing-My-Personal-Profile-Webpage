@@ -1,49 +1,274 @@
-body {
+/* =========================
+   AESTHETIC PERSONAL WEBSITE
+   ========================= */
+
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: white;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    color: #3f3d56;
     text-align: center;
 
-    /* Gradient */
-    background: linear-gradient(135deg, #4facfe, #7367f0);
+    /* Soft aesthetic gradient */
+    background: linear-gradient(
+        135deg,
+        #fbc2eb,
+        #a6c1ee,
+        #c2e9fb
+    );
+
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
 }
+
+/* =========================
+   BACKGROUND ANIMATION
+   ========================= */
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* =========================
+   NAVIGATION BAR
+   ========================= */
+
+nav {
+    width: 100%;
+    padding: 18px 10px;
+
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 4px 20px rgba(80, 70, 100, 0.15);
+}
+
+nav a {
+    display: inline-block;
+    margin: 5px 12px;
+
+    color: #5b5575;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #d66ba0;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   MAIN PROFILE CONTAINER
+   ========================= */
 
 .profile {
-    width: 70%;
-    margin: 80px auto;
-    padding: 40px;
+    width: 80%;
+    max-width: 900px;
 
-    /* Opacity */
-    background-color: rgba(0, 0, 0, 0.65);
+    margin: 70px auto;
+    padding: 45px;
 
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.65);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(80, 70, 100, 0.18);
 }
 
-/* Text and Font */
+/* =========================
+   MAIN TITLE
+   ========================= */
+
 h1 {
+    margin-bottom: 25px;
+
     font-family: Georgia, serif;
-    font-size: 40px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    font-size: 45px;
+
+    color: #665477;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        2px 2px 5px rgba(100, 80, 120, 0.15);
 }
+
+/* =========================
+   SUBTITLE
+   ========================= */
 
 h2 {
+    margin: 20px 0 10px;
+
+    color: #b85c8e;
     font-size: 25px;
-    color: #4facfe;
+
+    font-weight: 600;
 }
+
+/* =========================
+   PARAGRAPHS
+   ========================= */
 
 p {
-    font-size: 18px;
-    line-height: 1.6;
+    margin: 12px auto;
+
+    max-width: 700px;
+
+    color: #55536a;
+
+    font-size: 17px;
+    line-height: 1.8;
 }
 
-/* Button */
-button {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 20px;
-    background: white;
-    color: #4f46e5;
-    font-size: 16px;
-    cursor: pointer;
+/* =========================
+   CARDS
+   ========================= */
+
+.card {
+    margin: 20px 0;
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 20px rgba(80, 70, 100, 0.10);
+
+    transition: 0.3s ease;
 }
+
+.card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        0 15px 30px rgba(80, 70, 100, 0.18);
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+
+button {
+    margin-top: 25px;
+
+    padding: 14px 30px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #d66ba0,
+        #8e7dca
+    );
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(150, 100, 160, 0.25);
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    opacity: 0.85;
+
+    box-shadow:
+        0 12px 25px rgba(150, 100, 160, 0.35);
+}
+
+/* =========================
+   LINKS
+   ========================= */
+
+.profile a {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 10px 22px;
+
+    color: white;
+    background: #8e7dca;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.profile a:hover {
+    background: #d66ba0;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   MOBILE DESIGN
+   ========================= */
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 15px 5px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .profile {
+        width: 90%;
+        margin: 40px auto;
+        padding: 25px 18px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    }
