@@ -1,125 +1,49 @@
-/* GENERAL PAGE */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    color: white;
     text-align: center;
-    color: white;
 
-    /* COLOR + GRADIENT */
-    background: linear-gradient(
-        135deg,
-        #ff6b6b,
-        #feca57,
-        #48dbfb,
-        #5f27cd
-    );
-
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    /* Gradient */
+    background: linear-gradient(135deg, #4facfe, #7367f0);
 }
 
-/* GRADIENT ANIMATION */
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* NAVIGATION */
-nav {
-    background-color: rgba(0, 0, 0, 0.70);
-    padding: 20px;
-}
-
-/* NAVIGATION TEXT */
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
-    margin: 0 10px;
-}
-
-/* HOVER COLOR */
-nav a:hover {
-    color: #feca57;
-}
-
-/* MAIN PROFILE BOX */
 .profile {
-    width: 75%;
-    margin: 60px auto;
+    width: 70%;
+    margin: 80px auto;
     padding: 40px;
 
-    /* OPACITY */
+    /* Opacity */
     background-color: rgba(0, 0, 0, 0.65);
 
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
 }
 
-/* MAIN TITLE */
+/* Text and Font */
 h1 {
     font-family: Georgia, serif;
-    font-size: 45px;
-    color: #feca57;
-
-    /* TEXT */
+    font-size: 40px;
     text-transform: uppercase;
-    letter-spacing: 4px;
-    text-shadow: 3px 3px 5px black;
+    letter-spacing: 3px;
 }
 
-/* SUBTITLE */
 h2 {
-    color: #48dbfb;
-    font-size: 27px;
+    font-size: 25px;
+    color: #4facfe;
 }
 
-/* PARAGRAPH */
 p {
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
-/* CARDS */
-.card {
-    background-color: rgba(255, 255, 255, 0.15);
-    margin: 20px;
-    padding: 20px;
-    border-radius: 20px;
-
-    /* OPACITY */
-    border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-/* CARD HOVER */
-.card:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    transform: scale(1.03);
-    transition: 0.3s;
-}
-
-/* BUTTON */
+/* Button */
 button {
-    background: linear-gradient(45deg, #ff6b6b, #5f27cd);
-    color: white;
+    padding: 12px 25px;
     border: none;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
+    border-radius: 20px;
+    background: white;
+    color: #4f46e5;
+    font-size: 16px;
     cursor: pointer;
 }
-
-button:hover {
-    opacity: 0.8;
-    }
