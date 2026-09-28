@@ -1,4 +1,252 @@
-/* =================================
+//* =================================
+   PERSONAL PROFILE WEBSITE
+   GREEN BACKGROUND + BLACK TEXT
+   ================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #4f9d69;
+    color: #000000;
+    font-family: "Comic Sans MS", "Segoe Print", cursive;
+}
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+nav {
+    width: 95%;
+    margin: 20px auto 0;
+    padding: 22px 15px;
+    text-align: center;
+
+    background: #287a45;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* ================================
+   MAIN CONTENT
+   ================================ */
+
+.profile {
+    width: 95%;
+    max-width: 1000px;
+    min-height: 750px;
+
+    margin: 0 auto;
+    padding: 80px 45px;
+
+    text-align: center;
+
+    background: #8fca9b;
+    border-radius: 0 0 20px 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================
+   NAME / MAIN TITLE
+   ================================ */
+
+h1 {
+    margin: 20px 0 40px;
+
+    color: #000000;
+
+    font-family: Georgia, serif;
+    font-size: 60px;
+
+    font-weight: bold;
+    letter-spacing: 5px;
+
+    text-shadow: 3px 3px 0 #4f9d69;
+}
+
+/* ================================
+   SUBTITLE
+   ================================ */
+
+h2 {
+    margin: 25px 0 15px;
+
+    color: #000000;
+
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* ================================
+   PARAGRAPH
+   ================================ */
+
+p {
+    margin: 15px auto;
+    max-width: 850px;
+
+    color: #000000;
+
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+/* ================================
+   SECTION TITLE
+   ================================ */
+
+.section-title {
+    margin-top: 70px;
+    margin-bottom: 40px;
+
+    color: #000000;
+
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* ================================
+   CARDS
+   ================================ */
+
+.card {
+    max-width: 750px;
+
+    margin: 25px auto;
+    padding: 25px;
+
+    background: #b7dfbd;
+
+    border: 3px solid #287a45;
+    border-radius: 15px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #c9e8ce;
+}
+
+/* ================================
+   IMAGES
+   ================================ */
+
+.profile img {
+    max-width: 90%;
+    height: auto;
+
+    margin-top: 25px;
+
+    border: 5px solid #000000;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ================================
+   BUTTON
+   ================================ */
+
+button {
+    margin-top: 25px;
+
+    padding: 13px 30px;
+
+    background: #287a45;
+    color: #000000;
+
+    border: 3px solid #000000;
+    border-radius: 25px;
+
+    font-family: "Comic Sans MS", cursive;
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d5c34;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* ================================
+   LINKS
+   ================================ */
+
+.profile a {
+    color: #000000;
+
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.profile a:hover {
+    color: #ffffff;
+}
+
+/* ================================
+   MOBILE PHONE
+   ================================ */
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 18px 8px;
+    }
+
+    nav a {
+        font-size: 17px;
+        margin: 4px;
+    }
+
+    .profile {
+        width: 95%;
+        padding: 55px 18px;
+    }
+
+    h1 {
+        font-size: 42px;
+        letter-spacing: 3px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+} =================================
    PERSONAL PROFILE WEBSITE
    GREEN AESTHETIC DESIGN
    ================================= */
