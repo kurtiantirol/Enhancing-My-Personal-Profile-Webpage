@@ -1,255 +1,113 @@
-/* =================================
-   PERSONAL PROFILE WEBSITE
-   LIGHT GREEN + BLACK TEXT
-   ================================= */
-
-* {
-    box-sizing: border-box;
+/* --- Global Styles --- */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
-body {
-    background: #d8f3dc;
-    color: #000000;
-    font-family: "Comic Sans MS", "Segoe Print", cursive;
+/* --- Sticky Navigation & List Properties (Criteria: Lists & Position) --- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #333;
 }
 
-/* ================================
-   NAVIGATION
-================================ */
-
-nav {
-    width: 95%;
-    margin: 20px auto 0;
-    padding: 22px 15px;
-    text-align: center;
-
-    background: #b7e4c7;
-
-    border: 3px solid #74a57f;
-    border-radius: 15px;
-
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+.nav-menu ul {
+    list-style-type: none; /* Removes default bullets */
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-nav a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 20px;
+.nav-menu li {
+    padding: 15px 20px;
+}
+
+/* --- Link Properties & States (Criteria: Link Properties - 15 pts) --- */
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none; /* Removes underline */
     font-weight: bold;
-    margin: 0 8px;
-    transition: 0.3s;
 }
 
-nav a:hover {
-    color: #1b4332;
+.nav-menu a:link {
+    color: #ffffff;
 }
 
-/* ================================
-   MAIN CONTENT
-================================ */
-
-.profile {
-    width: 95%;
-    max-width: 1000px;
-    min-height: 750px;
-
-    margin: 0 auto;
-    padding: 80px 45px;
-
-    text-align: center;
-
-    background: #c7eed0;
-
-    border: 3px solid #74a57f;
-    border-top: none;
-    border-radius: 0 0 20px 20px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+.nav-menu a:visited {
+    color: #cccccc;
 }
 
-/* ================================
-   NAME / MAIN TITLE
-================================ */
-
-h1 {
-    margin: 20px 0 40px;
-
-    color: #000000;
-
-    font-family: Georgia, serif;
-    font-size: 60px;
-
-    font-weight: bold;
-    letter-spacing: 5px;
-
-    text-shadow: 3px 3px 0 #9bd5a7;
+.nav-menu a:hover {
+    color: #ff6347; /* Turns tomato red on mouse hover */
 }
 
-/* ================================
-   SUBTITLE
-================================ */
-
-h2 {
-    margin: 25px 0 15px;
-
-    color: #000000;
-
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 2px;
+.nav-menu a:active {
+    color: #ffa500; /* Turns orange when clicked */
 }
 
-/* ================================
-   PARAGRAPH
-================================ */
-
-p {
-    margin: 15px auto;
-    max-width: 850px;
-
-    color: #000000;
-
-    font-size: 19px;
-    line-height: 1.8;
+/* --- CSS Box Model (Criteria: width, height, padding, border, margin - 20 pts) --- */
+.main-content {
+    padding: 40px;
 }
 
-/* ================================
-   SECTION TITLE
-================================ */
-
-.section-title {
-    margin-top: 70px;
-    margin-bottom: 40px;
-
-    color: #000000;
-
-    font-size: 34px;
-    font-weight: bold;
-    letter-spacing: 3px;
-}
-
-/* ================================
-   CARDS
-================================ */
-
-.card {
-    max-width: 750px;
-
-    margin: 25px auto;
-    padding: 25px;
-
-    background: #e4f7e8;
-
-    border: 3px solid #74a57f;
-    border-radius: 15px;
-
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    background: #d1f0d7;
-}
-
-/* ================================
-   IMAGES
-================================ */
-
-.profile img {
-    max-width: 90%;
+.profile-card {
+    width: 600px;
     height: auto;
-
-    margin-top: 25px;
-
-    border: 5px solid #000000;
-    border-radius: 15px;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    border: 2px solid #333;
+    margin: 20px auto;
+    background-color: #ffffff;
 }
 
-/* ================================
-   BUTTON
-================================ */
-
-button {
-    margin-top: 25px;
-
-    padding: 13px 30px;
-
-    background: #b7e4c7;
-    color: #000000;
-
-    border: 3px solid #000000;
-    border-radius: 25px;
-
-    font-family: "Comic Sans MS", cursive;
-    font-size: 18px;
-    font-weight: bold;
-
-    cursor: pointer;
-    transition: 0.3s;
+/* --- Float and Clear Properties (Criteria: Position & Float - 15 pts) --- */
+.profile-image {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border-radius: 50%;
 }
 
-button:hover {
-    background: #95d5b2;
-    color: #000000;
-
-    transform: translateY(-3px);
+.footer {
+    clear: both; /* Prevents footer from overlapping with floated elements */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
 
-/* ================================
-   LINKS
-================================ */
-
-.profile a {
-    color: #000000;
-
-    font-weight: bold;
-    text-decoration: none;
+/* --- Z-Index and Position Demonstration (Criteria: Z-index - 10 pts) --- */
+.overlap-container {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    margin: 40px auto;
 }
 
-.profile a:hover {
-    color: #1b4332;
+.box-one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100px;
+    background-color: #3498db;
+    z-index: 1; /* Lower layer */
+    padding: 10px;
+    color: white;
 }
 
-/* ================================
-   MOBILE PHONE
-================================ */
-
-@media (max-width: 600px) {
-
-    nav {
-        padding: 18px 8px;
-    }
-
-    nav a {
-        font-size: 17px;
-        margin: 4px;
-    }
-
-    .profile {
-        width: 95%;
-        padding: 55px 18px;
-    }
-
-    h1 {
-        font-size: 42px;
-        letter-spacing: 3px;
-    }
-
-    h2 {
-        font-size: 23px;
-    }
-
-    p {
-        font-size: 17px;
-    }
-
-    .section-title {
-        font-size: 27px;
-    }
-}
+.box-two {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: 150px;
+    height: 100px;
+    background-color: #e74c3c;
+    z-index: 2; /* Higher layer - appears in front */
+    padding: 10px;
+    color: white;
+   }
